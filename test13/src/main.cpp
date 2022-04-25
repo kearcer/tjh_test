@@ -30,7 +30,7 @@ unsigned long int VMF_GetTime()
     return lltime;
 }
 
-void get_local_timestamp()
+char* get_local_timestamp()
 {
 	/* 获取本地utc时间 */
 	struct timeval tv;
