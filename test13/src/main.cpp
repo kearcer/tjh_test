@@ -55,27 +55,25 @@ char* get_local_timestamp()
 	sprintf(timeStr1, "%d", timestamp1);		// int
 	sprintf(timeStr2, "%ld", timestamp2);		// long
 	sprintf(timeStr3, "%lld", timestamp3);	// long long
-    printf("[%s]\n",timeStr1);
-    printf("[%s]\n",timeStr2);
-    printf("[%s]\n",timeStr3);
+    // printf("[%s]\n",timeStr1);
+    // printf("[%s]\n",timeStr2);
+    // printf("[%s]\n",timeStr3);
 
 	/* utc时间字符串转换为整型 */
 	int timeInt = atoi(timeStr1);			// 转成整型 int
 	long timeLong = atol(timeStr2);			// 转成长整型 long 
 	long long timeLLong = atoll(timeStr3);	// 转成长长整型 long long
-    printf("[%d]\n",timeInt);
-    printf("[%d]\n",timeLong);
-    printf("[%d]\n",timeLLong);
+    // printf("[%d]\n",timeInt);
+    // printf("[%d]\n",timeLong);
+    // printf("[%d]\n",timeLLong);
     return timeStr2;
 }
 
 
 int main() {
-    char *result;
-    unsigned long int a = VMF_GetTime();
-    // get_local_timestamp();
-    printf("a:%d\n", a);
-
+    char *utc;
+    utc = get_local_timestamp();
+    printf("[%s]\n",utc);
     p = (char *)malloc(256);
     FILE *fp1 = fopen("/home/tjh_test/test13/sei_61_0_91874152.sei", "rb");
     
