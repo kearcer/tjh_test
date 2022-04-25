@@ -66,6 +66,7 @@ char* get_local_timestamp()
     printf("[%d]\n",timeInt);
     printf("[%d]\n",timeLong);
     printf("[%d]\n",timeLLong);
+    return timeStr2;
 }
 
 
