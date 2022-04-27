@@ -8,23 +8,10 @@
 #include <math.h>
 #include <sys/time.h>
 
-char*stamp = "%";
-
-char* get_local_timestamp()
-{
-	struct timeval tv;
-    char timeStr2[20];
-    gettimeofday(&tv, NULL);
-	long long timestamp2 = tv.tv_sec*1000 + tv.tv_usec/1000;
-    memset(timeStr2, 0, sizeof(timeStr2));
-	sprintf(timeStr2, "%ld", timestamp2);
-
-    return timeStr2;
-}
-
 int Update(char * p, char *ltc)
 {
     struct timeval tv;
+    char*stamp = "%";
     char utc[20];
     gettimeofday(&tv, NULL);
 	long long timestamp = tv.tv_sec*1000 + tv.tv_usec/1000;
