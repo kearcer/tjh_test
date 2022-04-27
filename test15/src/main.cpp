@@ -8,7 +8,7 @@
 #include <math.h>
 #include <sys/time.h>
 
-int Update(char * p, char *ltc)
+int Update_Sdi_ltc(char * p, int ltc_info)
 {
     struct timeval tv;
     char*stamp = "%";
@@ -17,6 +17,13 @@ int Update(char * p, char *ltc)
 	long long timestamp = tv.tv_sec*1000 + tv.tv_usec/1000;
     memset(utc, 0, sizeof(utc));
 	sprintf(utc, "%ld", timestamp);
+
+    char ltc[256]={0};
+    int cHour = ((ltc_info >> 24) & 0xff);
+    int cMinute = ((ltc_info >> 16) & 0xff);
+    int cSecond = ((ltc_info >> 8) & 0xff);
+    int cFrame = (ltc_info & 0xff);
+    sprintf(ltc, "%d:%d:%d.%d",cHour, cMinute, cSecond, cFrame);
 
     while (1) 
     {
@@ -49,12 +56,12 @@ int Update(char * p, char *ltc)
         else
             break;
     }
-    return 0;
+    return strlen(p);
 }
 
 
 int main() {
-    char*ltc="12:34:56.17";
+    int ltc=12345678;
     char s[256] = "%utc% %ltc% %123utc% %%ltc%% %%%utc%%%";
     char *p;
     int r,n,i;
@@ -62,9 +69,10 @@ int main() {
     printf("输入文本：%s\n", s);
     p=s;
 
-    Update(p, ltc);
+    int len = Update_Sdi_ltc(p, ltc);
 
     printf("%s\n",s);
+    printf("%d\n",len);
 
     return 0;
 }
