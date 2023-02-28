@@ -45,6 +45,22 @@
         "memory_resource": "cpp",
         "optional": "cpp",
         "random": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "unordered_set": "cpp",
+        "chrono": "cpp",
+        "condition_variable": "cpp",
+        "ctime": "cpp",
+        "forward_list": "cpp",
+        "iomanip": "cpp",
+        "mutex": "cpp",
+        "ratio": "cpp",
+        "thread": "cpp",
+        "cfenv": "cpp",
+        "cinttypes": "cpp",
+        "bitset": "cpp",
+        "future": "cpp",
+        "regex": "cpp",
+        "queue": "cpp",
+        "stack": "cpp"
     }
 }
