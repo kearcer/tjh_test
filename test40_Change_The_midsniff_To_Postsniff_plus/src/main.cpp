@@ -1,121 +1,96 @@
-/*
- * @Author: Jiahui Tang
- * @Date: 2023-02-26 12:21:37
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-02-26 21:41:57
- * @Description:test39_Change_The_midsniff_To_Postsniff
- */
-#include <stdio.h>
-#include <stdlib.h>
-#include <string>
-#include <stack>
-#include <sstream>
+// 引入头文件
 #include <iostream>
+#include <stack>
+#include <string>
+using namespace std;
 
-bool IsNumb(char chr)
+// 定义运算符的优先级
+int precedence(char c)
 {
-    if (chr >= '0' && chr <= '9')
-        return true;
-    else
-        return false;
-}
-
-int PermissionLevel(char C)
-{
-    if (C == '+' || C == '-')
+    switch (c)
+    {
+    case '+':
+    case '-':
         return 1;
-    else if (C == '*' || C == '/')
+    case '*':
+    case '/':
         return 2;
-    else
+    default:
         return -1;
+    }
 }
 
-bool IsHigherPermission(char ch1, char ch2)
+// 定义一个函数，判断一个字符是否是数字
+bool is_digit(char c)
 {
-    int a = PermissionLevel(ch1);
-    int b = PermissionLevel(ch2);
-    if (b > a)
-        return 1;
-    else
-        return 0;
+    return c >= '0' && c <= '9';
 }
 
-/*
-0:当前运算符push进栈
-1:当前运算符以括号结束
-2：当前运算符号因优先级到达结束
-*/
-int Elementlevel(char chr, std::stack<char> stk)
+// 定义一个函数，判断一个字符是否是运算符
+bool is_operator(char c)
 {
-    if (chr == '(')
-        return 0;
-    else if (chr == ')')
-        return 1;
-    else if (stk.empty() == 1)
-        return 0;
-    else if (IsHigherPermission(chr, stk.top()))
-        return 2;
+    return c == '+' || c == '-' || c == '*' || c == '/';
 }
 
-std::string ChangeMidtoPostsniff(std::string S)
+// 定义一个函数，将中缀表达式转换为后缀表达式
+string infix_to_postfix(string infix)
 {
-    std::stack<char> stk;
-    std::string tmp;
-    std::string res;
-    int i;
-    int size = S.size();
-    for (i = 0; i < size; i++)
+    // 初始化一个空栈，用于存放运算符
+    stack<char> stack;
+    // 初始化一个空字符串，用于存放后缀表达式
+    string postfix = "";
+    // 遍历中缀表达式的每个字符
+    for (char c : infix)
     {
-        if (IsNumb(S[i]))
+        // 如果是数字，直接添加到后缀表达式中
+        if (is_digit(c))
         {
-            res += S[i];
-            if (IsNumb(S[i + 1]) && (i + 1 <= size))
-                continue;
-            else
-                res += ' ';
+            postfix += c;
         }
-        else
+        // 如果是左括号，压入栈中
+        else if (c == '(')
         {
-            int level = Elementlevel(S[i], stk);
-            if (level == 0)
-                stk.push(S[i]);
-            else if (level == 1)
+            stack.push(c);
+        }
+        // 如果是右括号，弹出栈中的运算符，并添加到后缀表达式中，直到遇到左括号为止
+        else if (c == ')')
+        {
+            while (!stack.empty() && stack.top() != '(')
             {
-                while (stk.top() != '(')
-                {
-                    res += stk.top();
-                    stk.pop();
-                }
-                stk.pop(); // 弹出左括号
-                res += ' ';
+                postfix += stack.top();
+                stack.pop();
             }
-            else if (level == 2)
+            // 弹出左括号，并丢弃它
+            if (!stack.empty())
             {
-                while (stk.empty() != 1 && stk.top() != '(')
-                {
-                    res += stk.top();
-                    stk.pop();
-                }
-                stk.push(S[i]);
+                stack.pop();
             }
         }
+        // 如果是运算符，弹出栈中的运算符，并添加到后缀表达式中，直到遇到优先级更低或者左括号为止。然后压入当前的运算符到栈中。
+        else if (is_operator(c))
+        {
+            while (!stack.empty() && stack.top() != '(' && precedence(c) <= precedence(stack.top()))
+            {
+                postfix += stack.top();
+                stack.pop();
+            }
+            stack.push(c);
+        }
     }
-
-    while (stk.empty() != 1)
+    // 弹出栈中剩余的运算符，并添加到后缀表达式中。
+    while (!stack.empty())
     {
-        res += stk.top();
-        stk.pop();
+        postfix += stack.top();
+        stack.pop();
     }
-
-    return res;
+    // 返回后缀表达式。
+    return postfix;
 }
 
+// 测试代码：
 int main()
 {
-    std::string s = "((18+7)*4-16)*9";
-    std::string res;
-
-    res = ChangeMidtoPostsniff(s);
-
-    printf("%s\n", res.c_str());
+    string infix = "((18+7)*4-16)*9";
+    string postfix = infix_to_postfix(infix);
+    cout << postfix << endl; // 输出：187+4*16-9*
 }
