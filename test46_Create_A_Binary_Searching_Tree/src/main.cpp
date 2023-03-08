@@ -2,12 +2,16 @@
  * @Author: Jiahui Tang
  * @Date: 2023-03-05 16:03:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-03-05 19:08:14
+ * @LastEditTime: 2023-03-08 22:19:05
  * @Description:test46_Create_A_Binary_Searching_Tree
  */
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <queue>
+#include <stack>
+
+#define MAX(a, b) a > b ? a : b
 
 struct Node
 {
@@ -93,14 +97,167 @@ void FindMax(Node *head)
     return;
 }
 
+int PrintHeight(Node *head)
+{
+    if (head == NULL)
+    {
+        // printf("tree height is 0\n");
+        return -1;
+    }
+    else
+        return MAX(PrintHeight(head->left), PrintHeight(head->right)) + 1;
+}
+
+void Hierarchical_traversal(Node *head)
+{
+    printf("tree: ");
+    std::queue<Node *> Q;
+    Node *LfetNode = NULL;
+    Node *RightNode = NULL;
+    if (head == NULL)
+    {
+        printf("end tree\n");
+        return;
+    }
+    else
+    {
+        Q.push(head);
+        while (Q.empty() != 1)
+        {
+            printf("%d ", Q.front()->data);
+            LfetNode = Q.front()->left;
+            RightNode = Q.front()->right;
+            if (LfetNode != NULL)
+            {
+                Q.push(LfetNode);
+            }
+            if (RightNode != NULL)
+            {
+                Q.push(RightNode);
+            }
+            Q.pop();
+        }
+    }
+    printf("\n");
+    return;
+}
+
+void DLR_traversal(Node *head)
+{
+    if (head == NULL)
+        return;
+    printf("%d ", head->data);
+    DLR_traversal(head->left);
+    DLR_traversal(head->right);
+    return;
+}
+
+void DLR_traversal_Using_Stack(Node *head)
+{
+    printf("DLR tree using stack: ");
+    std::stack<Node *> S;
+    if (head == NULL)
+        return;
+    else
+    {
+        S.push(head);
+        while (S.empty() != 1)
+        {
+            Node *element = S.top();
+            printf("%d ", element->data);
+            S.pop();
+            if (element->right)
+                S.push(element->right);
+            if (element->left)
+                S.push(element->left);
+        }
+    }
+    printf("\n");
+    return;
+}
+
+void LDR_traversal(Node *head)
+{
+    if (head == NULL)
+        return;
+    DLR_traversal(head->left);
+    printf("%d ", head->data);
+    DLR_traversal(head->right);
+    return;
+}
+
+void LDR_traversal_Using_Stack(Node *head)
+{
+    printf("LDR tree using stack: ");
+    std::stack<Node *> S;
+    if (head == NULL)
+        return;
+    else
+    {
+        while (S.empty() != 1 || head != NULL)
+        {
+            while (head != NULL)
+            {
+                S.push(head);
+                head = head->left;
+            }
+            head = S.top();
+            printf("%d ", head->data);
+            S.pop();
+            head = head->right;
+        }
+    }
+    printf("\n");
+    return;
+}
+
+void LRD_traversal(Node *head)
+{
+    if (head == NULL)
+        return;
+    LRD_traversal(head->left);
+    LRD_traversal(head->right);
+    printf("%d ", head->data);
+    return;
+}
+
+void LRD_traversal_Using_Stack(Node *head)
+{
+    printf("RDL tree using stack: ");
+    std::stack<Node *> S;
+    std::stack<Node *> S_rev;
+    if (head == NULL)
+        return;
+    else
+    {
+        S.push(head);
+        while (S.empty() != 1)
+        {
+            Node *top = S.top();
+            S_rev.push(top);
+            S.pop();
+            if (top->left != NULL)
+                S.push(top->left);
+            if (top->right != NULL)
+                S.push(top->right);
+        }
+        while (S_rev.empty() != 1)
+        {
+            printf("%d ", S_rev.top()->data);
+            S_rev.pop();
+        }
+    }
+    printf("\n");
+    return;
+}
+
 int main()
 {
     Node *BSThead = NULL;
+    BSThead = Add(BSThead, 8);
     BSThead = Add(BSThead, 2);
-    BSThead = Add(BSThead, 3);
     BSThead = Add(BSThead, 4);
     BSThead = Add(BSThead, 7);
-    BSThead = Add(BSThead, 8);
     BSThead = Add(BSThead, 10);
     BSThead = Add(BSThead, 13);
     Search(BSThead, 4);
@@ -108,5 +265,22 @@ int main()
     FindMin(BSThead);
     Search(BSThead, 4);
     FindMax(BSThead);
+    printf("height of tree %d\n", PrintHeight(BSThead));
+    Hierarchical_traversal(BSThead);
+    printf("DLR tree using traversal:");
+    DLR_traversal(BSThead);
+    printf("\n");
+    DLR_traversal_Using_Stack(BSThead);
+
+    printf("LDR tree using traversal:");
+    LDR_traversal(BSThead);
+    printf("\n");
+    LDR_traversal_Using_Stack(BSThead);
+
+    printf("RDL tree using traversal:");
+    LRD_traversal(BSThead);
+    printf("\n");
+    LRD_traversal_Using_Stack(BSThead);
+
     return 0;
 }
