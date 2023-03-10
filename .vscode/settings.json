@@ -62,5 +62,6 @@
         "regex": "cpp",
         "queue": "cpp",
         "stack": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}/test46_Create_A_Binary_Searching_Tree"
 }

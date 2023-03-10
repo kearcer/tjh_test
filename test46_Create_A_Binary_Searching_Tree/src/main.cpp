@@ -2,7 +2,7 @@
  * @Author: Jiahui Tang
  * @Date: 2023-03-05 16:03:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-03-08 22:19:05
+ * @LastEditTime: 2023-03-10 22:05:14
  * @Description:test46_Create_A_Binary_Searching_Tree
  */
 #include <stdio.h>
@@ -10,6 +10,7 @@
 #include <iostream>
 #include <queue>
 #include <stack>
+#include <limits.h>
 
 #define MAX(a, b) a > b ? a : b
 
@@ -251,6 +252,37 @@ void LRD_traversal_Using_Stack(Node *head)
     return;
 }
 
+bool IsLesserthanRoot(Node *head, int root)
+{
+    if ((head == NULL) || ((head->data <= root) && IsLesserthanRoot(head->left, root) && IsLesserthanRoot(head->right, root)))
+        return true;
+    else
+        return false;
+}
+
+bool IsGreaterthanRoot(Node *head, int root)
+{
+    if (head == NULL || ((head->data > root) && IsGreaterthanRoot(head->left, root) && IsGreaterthanRoot(head->right, root)))
+        return true;
+    else
+        return false;
+}
+
+bool IsBSTree(Node *head, int a = INT_MAX, int b = INT_MIN)
+{
+    if (head == NULL)
+    {
+        return true;
+    }
+    else if (head->data > b && head->data < a &&
+             IsBSTree(head->left) && IsBSTree(head->right))
+    {
+        return true;
+    }
+    else
+        return false;
+}
+
 int main()
 {
     Node *BSThead = NULL;
@@ -281,6 +313,12 @@ int main()
     LRD_traversal(BSThead);
     printf("\n");
     LRD_traversal_Using_Stack(BSThead);
+
+    bool flag = IsBSTree(BSThead);
+    if (flag == false)
+        printf("not a BST tree\n");
+    else if (flag == true)
+        printf("is a BST tree\n");
 
     return 0;
 }
