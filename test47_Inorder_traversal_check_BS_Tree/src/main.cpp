@@ -2,7 +2,7 @@
  * @Author: Jiahui Tang
  * @Date: 2023-03-11 20:48:50
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-03-12 11:43:13
+ * @LastEditTime: 2023-03-13 19:52:00
  * @Description: test47_Inorder_traversal_check_BS_Tree
  */
 
@@ -76,6 +76,57 @@ bool IsBSTree_Using_Vector(std::vector<T> V)
     return true;
 }
 
+int FindMin(Node *Tree)
+{
+    if (Tree->left == nullptr)
+    {
+        return Tree->data;
+    }
+    return FindMin(Tree->left);
+}
+
+Node *Delete(Node *head, int data)
+{
+    if (head == nullptr)
+    {
+        return head;
+    }
+    else if (head->data > data)
+    {
+        head->left = Delete(head->left, data);
+    }
+    else if (head->data < data)
+    {
+        head->right = Delete(head->right, data);
+    }
+    else
+    {
+        Node *temp = head;
+        if (head->left == nullptr && head->right == nullptr)
+        {
+            delete head;
+            head = nullptr;
+        }
+        else if (head->left == nullptr && head->right != nullptr)
+        {
+            head = head->right;
+            delete temp;
+        }
+        else if (head->left != nullptr && head->right == nullptr)
+        {
+            head = head->left;
+            delete temp;
+        }
+        else if (head->left != nullptr && head->right != nullptr)
+        {
+            head->data = FindMin(head->right);
+            // head->data = temp->data;
+            head->right = Delete(head->right, head->data);
+        }
+    }
+    return head;
+}
+
 int main()
 {
     std::vector<int> vec;
@@ -93,5 +144,9 @@ int main()
         printf("%d ", i);
     }
     printf("Tree is BST:%d\n", IsBSTree_Using_Vector(vec));
+
+    Tree = Delete(Tree, 5);
+    LDR_Reversual_Print(Tree);
+
     return 0;
 }
