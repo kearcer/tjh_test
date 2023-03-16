@@ -8,7 +8,7 @@
             "name": "g++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/test47_Inorder_traversal_check_BS_Tree/build/main",
+            "program": "${workspaceFolder}/test48_Create_and_Get_BSTree_Sucessor/build/main",
             // "args": ["-i", "/home/tjh/hdr_video_fmt_convert/TSparser/TR101290一级错误/errorfile(同步字节错误).ts", "-meta", "/home/tjh/hdr_video_fmt_convert/TSparser/cuva1.txt"],
             // "args": ["-i", "/home/tjh/hdr_video_fmt_convert/TSparser/123.ts", "-meta", "/home/tjh/hdr_video_fmt_convert/TSparser/cuva1.txt"],
             // "args": ["-mode", "0", "-i", "/home/tjh/hdr_video_fmt_convert/hdr_cuva_proj/projects/testbed_so/output.yuv", "-w","3840","-h","2160","-meta", "/home/tjh/hdr_video_fmt_convert/hdr_cuva_proj/projects/testbed_so/metadataCombine_spec_cuva.txt", "-offset", "0", "-frame_cnt", "100", "-display_light","600","-pixfmt", "yuv422p10le", "-transfer", "PQ", "-device", "-1"],          
@@ -16,7 +16,7 @@
             // "args": ["-mode", "2", "-i", "/home/tjh/zx/hdr_video_fmt_convert/hdr_cuva_proj/projects/testbed_so/output.yuv", "-w","3840","-h","2160","-meta", "/home/tjh/zx/hdr_video_fmt_convert/hdr_cuva_proj/projects/testbed_so/metadataCombine_spec_cuva.txt", "-o","/home/tjh/zx/hdr_video_fmt_convert/hdr_cuva_proj/projects/testbed_so/output1.yuv", "-offset", "0", "-frame_cnt", "2", "-display_light","100","-pixfmt", "yuv422p10le", "-transfer", "PQ"],
             // "additionalSOLibSearchPath":"${workspaceFolder}/bin/",
             "stopAtEntry": true,
-            "cwd": "${workspaceFolder}/test47_Inorder_traversal_check_BS_Tree", //当前工作目录
+            "cwd": "${workspaceFolder}/test48_Create_and_Get_BSTree_Sucessor", //当前工作目录
             "environment": [],
             "externalConsole": false,
             "launchCompleteCommand": "exec-run",

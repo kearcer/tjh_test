@@ -1,0 +1,18 @@
+# 设置CMake最低版本要求
+cmake_minimum_required(VERSION 3.10)
+
+# 设置项目名称和版本
+project(testbox)
+
+# 设置C++标准
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# 设置编译类型为Debug
+set(CMAKE_BUILD_TYPE Debug)
+
+# 添加可执行目标
+add_executable(main ./test.cpp)
+
+# 为目标添加-g选项
+target_compile_options(main PRIVATE -g)
