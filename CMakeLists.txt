@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_BUILD_TYPE Debug)
 
 # 添加可执行目标
-add_executable(main ./test.cpp)
+add_executable(main ./testbox/test.cpp)
 
 # 为目标添加-g选项
 target_compile_options(main PRIVATE -g)
