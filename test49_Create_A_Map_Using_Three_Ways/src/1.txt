@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+
+#define MAXSIZE 7
+
+class MyMap
+{
+private:
+    int m_map[MAXSIZE][MAXSIZE]; //邻接矩阵
+public:
+    MyMap(); //无参构造函数
+    MyMap(int edge[][2], int edgeNum); //带参构造函数
+    ~MyMap(); //析构函数
+    void PrintMap(); //打印邻接矩阵
+    int GetElement(int i, int j); //获取邻接矩阵元素
+};
+
+//无参构造函数
+MyMap::MyMap()
+{
+    for (int i = 0; i < MAXSIZE; i++)
+    {
+        for (int j = 0; j < MAXSIZE; j++)
+        {
+            m_map[i][j] = 0;
+        }
+    }
+}
+
+//带参构造函数
+MyMap::MyMap(int edge[][2], int edgeNum)
+{
+    for (int i = 0; i < MAXSIZE; i++)
+    {
+        for (int j = 0; j < MAXSIZE; j++)
+        {
+            m_map[i][j] = 0;
+        }
+    }
+    for (int i = 0; i < edgeNum; i++)
+    {
+        m_map[edge[i][0]][edge[i][1]] = 1;
+        m_map[edge[i][1]][edge[i][0]] = 1;
+    }
+}
+
+//析构函数
+MyMap::~MyMap()
+{
+    
+}
+
+//打印邻接矩阵
+void MyMap::PrintMap()
+{
+    for (int i = 0; i < MAXSIZE; i++)
+    {
+        for (int j = 0; j < MAXSIZE; j++)
+        {
+            cout << m_map[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+//获取邻接矩阵元素
+int MyMap::GetElement(int i, int j)
+{
+   return m_map[i][j];
+}

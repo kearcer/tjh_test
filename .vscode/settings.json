@@ -63,5 +63,6 @@
         "queue": "cpp",
         "stack": "cpp"
     },
-    "cmake.sourceDirectory": "${workspaceFolder}/test46_Create_A_Binary_Searching_Tree"
+    "cmake.sourceDirectory": "${workspaceFolder}/test46_Create_A_Binary_Searching_Tree",
+    "C_Cpp.errorSquiggles": "Enabled"
 }
