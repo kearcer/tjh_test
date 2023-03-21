@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # 设置项目名称和版本
-project(testbox)
+project(test47_Inorder_traversal_check_BS_Tree VERSION 1.0)
 
 # 设置C++标准
 set(CMAKE_CXX_STANDARD 11)
@@ -12,8 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_BUILD_TYPE Debug)
 
 # 添加可执行目标
-# add_executable(main ./testbox/test.cpp)
-add_executable(main ./test49_Create_A_Map_Using_Three_Ways/src/main.cpp)
+add_executable(main ./src/main.cpp)
 
 # 为目标添加-g选项
 target_compile_options(main PRIVATE -g)

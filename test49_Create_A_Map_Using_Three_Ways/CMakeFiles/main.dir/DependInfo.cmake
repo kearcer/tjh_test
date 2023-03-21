@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/code/tjh_code/tjh_test/test49_Create_A_Map_Using_Three_Ways/src/main.cpp" "CMakeFiles/main.dir/test49_Create_A_Map_Using_Three_Ways/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/test49_Create_A_Map_Using_Three_Ways/src/main.cpp.o.d"
+  "/home/code/tjh_code/tjh_test/test47_Inorder_traversal_check_BS_Tree/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.
