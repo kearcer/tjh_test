@@ -2,7 +2,7 @@
  * @Author: Jiahui Tang
  * @Date: 2023-03-20 18:34:30
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-03-20 19:37:48
+ * @LastEditTime: 2023-03-21 20:36:39
  * @Description:test49_Create_A_Map_Using_Three_Ways
  */
 #include <stdio.h>
@@ -19,6 +19,7 @@ public:
     MyMap(int edge[][2], int EdgeNum);
     ~MyMap();
     void PrintMap();
+    friend void printfElement(MyMap &mmp, int a, int b);
 
 private:
     int m_map[MAXSIZE][MAXSIZE];
@@ -59,6 +60,11 @@ void MyMap::PrintMap()
     }
 }
 
+void printfElement(MyMap &mmp, int a, int b)
+{
+    printf("(%d, %d):%d\n", a, b, mmp.m_map[a][b]);
+}
+
 int main()
 {
     int edge[][2] = {{1, 2},
@@ -70,6 +76,7 @@ int main()
     MyMap mmp(edge, edgenum);
 
     mmp.PrintMap();
+    printfElement(mmp, 1, 2);
 
     return 1;
 }
