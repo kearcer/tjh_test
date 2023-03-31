@@ -61,7 +61,8 @@
         "future": "cpp",
         "regex": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "climits": "cpp"
     },
     "cmake.sourceDirectory": "${workspaceFolder}/test46_Create_A_Binary_Searching_Tree",
     "C_Cpp.errorSquiggles": "Enabled"
