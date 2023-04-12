@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/main.dir/testbox/test.cpp.o -o main 
+/opt/rh/devtoolset-8/root/usr/bin/c++  -lstdc++ -g CMakeFiles/main.dir/testbox/test.cpp.o -o main 

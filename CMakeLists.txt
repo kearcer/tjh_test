@@ -11,6 +11,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # 设置编译类型为Debug
 set(CMAKE_BUILD_TYPE Debug)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lstdc++")
+
 # 添加可执行目标
 add_executable(main ./testbox/test.cpp)
 # add_executable(main ./test49_Create_A_Map_Using_Three_Ways/src/main.cpp)
