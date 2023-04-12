@@ -73,15 +73,15 @@ CMakeFiles/main.dir/testbox/test.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/testbox/test.cpp.o: ../testbox/test.cpp
 CMakeFiles/main.dir/testbox/test.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/code/tjh_code/tjh_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/testbox/test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/testbox/test.cpp.o -MF CMakeFiles/main.dir/testbox/test.cpp.o.d -o CMakeFiles/main.dir/testbox/test.cpp.o -c /home/code/tjh_code/tjh_test/testbox/test.cpp
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/testbox/test.cpp.o -MF CMakeFiles/main.dir/testbox/test.cpp.o.d -o CMakeFiles/main.dir/testbox/test.cpp.o -c /home/code/tjh_code/tjh_test/testbox/test.cpp
 
 CMakeFiles/main.dir/testbox/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/testbox/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/code/tjh_code/tjh_test/testbox/test.cpp > CMakeFiles/main.dir/testbox/test.cpp.i
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/code/tjh_code/tjh_test/testbox/test.cpp > CMakeFiles/main.dir/testbox/test.cpp.i
 
 CMakeFiles/main.dir/testbox/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/testbox/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/code/tjh_code/tjh_test/testbox/test.cpp -o CMakeFiles/main.dir/testbox/test.cpp.s
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/code/tjh_code/tjh_test/testbox/test.cpp -o CMakeFiles/main.dir/testbox/test.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
