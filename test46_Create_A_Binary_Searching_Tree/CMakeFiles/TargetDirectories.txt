@@ -1,3 +1,0 @@
-/home/code/tjh_code/tjh_test/test46_Create_A_Binary_Searching_Tree/CMakeFiles/rebuild_cache.dir
-/home/code/tjh_code/tjh_test/test46_Create_A_Binary_Searching_Tree/CMakeFiles/edit_cache.dir
-/home/code/tjh_code/tjh_test/test46_Create_A_Binary_Searching_Tree/CMakeFiles/main.dir
