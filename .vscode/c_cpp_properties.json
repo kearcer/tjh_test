@@ -1,17 +1,16 @@
 {
     "configurations": [
         {
-            "name": "Linux",
+            "name": "Windows",
             "includePath": [
-                "${workspaceFolder}",
-                "${workspaceFolder}/test22/inc",
-                "/home/opencv-4.5.5/modules/highgui/include/opencv2"
+                "${workspaceFolder}/**",
+                // 添加其他头文件路径
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": "D://anzhuanglujing//MINGW//bin//gcc.exe", // 保持不变
             "cStandard": "c11",
             "cppStandard": "c++14",
-            "intelliSenseMode": "gcc-x64"
+            "intelliSenseMode": "windows-gcc-x64" // 修改为 windows-gcc-x64
         }
     ],
     "version": 4

@@ -41,7 +41,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc build active file",
-            "command": "/usr/bin/gcc",
+            "command": "D:/anzhuanglujing/MINGW/bin/gdb.exe",
             "args": [
                 "-g",
                 "${file}",
@@ -60,7 +60,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc build active file ver(1)",
-            "command": "/usr/bin/gcc",
+            "command": "D:/anzhuanglujing/MINGW/bin/gdb.exe",
             "args": [
                 "-g",
                 "${file}",
@@ -79,7 +79,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc build active file ver(2)",
-            "command": "/usr/bin/gcc",
+            "command": "D:/anzhuanglujing/MINGW/bin/gdb.exe",
             "args": [
                 "-g",
                 "${file}",
@@ -136,7 +136,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc build active file ver(3)",
-            "command": "/usr/bin/gcc",
+            "command": "D:/anzhuanglujing/MINGW/bin/gdb.exe",
             "args": [
                 "-g",
                 "${file}",
@@ -155,7 +155,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc build active file ver(4)",
-            "command": "/usr/bin/gcc",
+            "command": "D:/anzhuanglujing/MINGW/bin/gdb.exe",
             "args": [
                 "-g",
                 "${file}",
@@ -212,7 +212,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc build active file ver(5)",
-            "command": "/usr/bin/gcc",
+            "command": "D:/anzhuanglujing/MINGW/bin/gdb.exe",
             "args": [
                 "-g",
                 "${file}",

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/workplace/code/tjh_test/build",
+  "command": "D:\\anzhuanglujing\\MINGW\\bin\\g++.exe    -lstdc++ -g -std=gnu++11 -g -o CMakeFiles\\main.dir\\testbox\\test.cpp.obj -c D:\\workplace\\code\\tjh_test\\testbox\\test.cpp",
+  "file": "D:/workplace/code/tjh_test/testbox/test.cpp",
+  "output": "CMakeFiles/main.dir/testbox/test.cpp.obj"
+}
+]
