@@ -3,61 +3,26 @@
 
 CMakeFiles/main.dir/testbox/test.cpp.obj
  D:/workplace/code/tjh_test/testbox/test.cpp
- D:/anzhuanglujing/MINGW/include/stdio.h
- D:/anzhuanglujing/MINGW/include/_mingw.h
- D:/anzhuanglujing/MINGW/include/msvcrtver.h
- D:/anzhuanglujing/MINGW/include/w32api.h
- D:/anzhuanglujing/MINGW/include/sdkddkver.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/stddef.h
- D:/anzhuanglujing/MINGW/include/sys/types.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/stdarg.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/stdlib.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/cstdlib
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++config.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/os_defines.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/cpu_defines.h
  D:/anzhuanglujing/MINGW/include/stdlib.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/algorithm
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/utility
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_relops.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_pair.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/move.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/concept_check.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/type_traits
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/initializer_list
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_algobase.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/functexcept.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/exception_defines.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/cpp_type_traits.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ext/type_traits.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ext/numeric_traits.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_iterator_base_types.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_iterator_base_funcs.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/debug/assertions.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_iterator.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/ptr_traits.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/debug/debug.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/predefined_ops.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_algo.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/algorithmfwd.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_heap.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_tempbuf.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_construct.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/new
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/exception
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/atomic_lockfree_defines.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/exception_ptr.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/nested_exception.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ext/alloc_traits.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/alloc_traits.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/memoryfwd.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/uniform_int_dist.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/limits
+ D:/anzhuanglujing/MINGW/include/_mingw.h
+ D:/anzhuanglujing/MINGW/include/msvcrtver.h
+ D:/anzhuanglujing/MINGW/include/w32api.h
+ D:/anzhuanglujing/MINGW/include/sdkddkver.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/stddef.h
+ D:/anzhuanglujing/MINGW/include/stdio.h
+ D:/anzhuanglujing/MINGW/include/sys/types.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/stdarg.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/iostream
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ostream
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ios
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/iosfwd
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stringfwd.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/memoryfwd.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/postypes.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/cwchar
  D:/anzhuanglujing/MINGW/include/wchar.h
@@ -72,7 +37,28 @@ CMakeFiles/main.dir/testbox/test.cpp.obj
  D:/anzhuanglujing/MINGW/include/time.h
  D:/anzhuanglujing/MINGW/include/locale.h
  D:/anzhuanglujing/MINGW/include/process.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/exception
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/atomic_lockfree_defines.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/exception_ptr.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/exception_defines.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/nested_exception.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/move.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/concept_check.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/type_traits
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/char_traits.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_algobase.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/functexcept.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/cpp_type_traits.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ext/type_traits.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ext/numeric_traits.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_pair.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_iterator_base_types.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_iterator_base_funcs.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/debug/assertions.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_iterator.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/ptr_traits.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/debug/debug.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/predefined_ops.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/cstdint
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/stdint.h
  D:/anzhuanglujing/MINGW/include/stdint.h
@@ -94,12 +80,16 @@ CMakeFiles/main.dir/testbox/test.cpp.obj
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/allocator.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32/bits/c++allocator.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ext/new_allocator.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/new
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/ostream_insert.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/cxxabi_forced.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_function.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/backward/binders.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/range_access.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/initializer_list
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/basic_string.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ext/alloc_traits.h
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/alloc_traits.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ext/string_conversions.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/cstdio
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/cerrno
@@ -123,20 +113,8 @@ CMakeFiles/main.dir/testbox/test.cpp.obj
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/ostream.tcc
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/istream
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/istream.tcc
- D:/anzhuanglujing/MINGW/include/string.h
- D:/anzhuanglujing/MINGW/include/strings.h
- D:/anzhuanglujing/MINGW/include/wchar.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/climits
- D:/anzhuanglujing/MINGW/include/limits.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/unordered_map
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/tuple
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/array
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/uses_allocator.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/ext/aligned_buffer.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/hashtable.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/hashtable_policy.h
- D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/unordered_map.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/vector
+ D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_construct.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_uninitialized.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_vector.h
  D:/anzhuanglujing/MINGW/lib/gcc/mingw32/6.3.0/include/c++/bits/stl_bvector.h
