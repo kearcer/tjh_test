@@ -1,0 +1,182 @@
+[3.1.1.41846]
+Date:
+    20180716
+Revision:
+    41846
+Fix issues:
+    1)CLOUD-2047:云转码解析异常素材分析
+    原因及修改方法：某些AVI 2.0的文件，在'strh'->'dwLength'只记录了第一段的时长，导致时长出错。目前的做法是通过‘dmlh'的dmlh_TotalFrame来纠错。
+    测试建议：需要与最新的mediainfo底层库一块测试，先验证这个文件，可以简单测几个avi文件，看看时长是否正确。
+OtherChanges:
+    无
+
+
+[3.1.1.39464]
+Date:
+    20171129
+Revision:
+    39464
+Fix issues:
+    1. BUG ID：CLOUD-3177 DNxHR HQX转码后的文件质量变差了。
+    原因及修改方法：ffmpeg 3.1.1不支持DNXDR，从ffmpeg 3.4 merge DNXHR代码到3.1.1中。
+    测试建议：验证BUG。
+    其他：只需更新libavcodec.so.57.48.101即可。
+OtherChanges:
+    无
+
+
+[3.1.1.38994]
+Date:
+    20171018
+Revision:
+    38994
+Fix issues:
+    1.CLOUD-3041 奥兰播出格式不兼容
+    原因及修改方法：ffmpeg mpeg-2编码不支持close gop12
+    测试建议：bug验证
+OtherChanges:
+    无
+
+
+[3.1.1.38933]
+Date:
+    20171011
+Revision:
+    38933
+Fix issues:
+    CLOUD-2919 华数云转码一个电影做声音均衡输出AC3有爆音
+    原因及修改方法: 华数机顶盒播放ac3音频，如果源音量过大，会爆音，原因是他们的播放器使用ac3 rf模式解码，所以修改ac3编码器的compr参数可配，并默认E3（意思是计算后，rf模式解码的音量跟源一样。原先是FF，rf模式解码会增大音量。）
+    测试建议: 在电脑上，只能验证各种参数的ac3输出是否正常。华数方面可以用机顶盒验证爆音问题。
+OtherChanges:
+    无
+
+
+[3.1.1.37591]
+Date:
+    20170706
+Revision:
+    37591
+Fix issues:
+    无
+OtherChanges:
+    修改项1：对于muxer，增加一个option（arc_io_buffer_size）来设置每次写的大小
+    测试建议：必须配合mediamuxer（1.0.0.18），通过mediamuxer来设置，测试建议请参考muxer的。
+
+
+[3.1.1.37544]
+Date:
+    20170630
+Revision:
+    37544
+Fix issues:
+    BUG ID：CLOUD-2840 甘肃测试转长素材出现丢帧的问题
+    修改：切换到ffmpeg时发现mpeg2解码时间戳不对，修改为输出绑定demux输入的时间戳。
+    测试建议：验证BUG
+OtherChanges:
+    无
+
+
+[3.1.1.36012]
+Date:
+    20170204
+Revision:
+    36012
+Fix issues:
+    Bug ID:CLOUD-2490 输入音频后，输出文件没有声音
+    原因及修改方法:  FLAC文件ffmpeg解析会生成video stream但只是一张图片，会造成seek失败，修改后flac文件不会生成video stream。修复                           
+    测试建议: flac文件seek和裁剪
+    其他: 无
+OtherChanges:
+    无
+
+
+[3.1.1.35524]
+Date:
+    20170106
+Revision:
+    35524
+Fix issues:
+    1.CLOUD-2501 MPEG2 某些参数下软编Hang
+    原因及修改方法：输出buffer太小导致
+    测试建议：软件编码高码率的mpeg2测试
+OtherChanges:
+    无
+
+
+[3.1.1.35321]
+Date:
+    20161219
+Revision:
+    35321
+Fix issues:
+    Feature ID: cloud-2297 [V1.14绿点功能 Engine]DV25 AVI、DV50 AVI 编码支持
+    实现方法: DV50生成时，码率显示不正确，原因是dv写VAUX section到时候没分奇偶写video source pack。已修复
+    测试建议: 测试生成dv25和dv50的avi文件查看mediainfo是否正确，能否播放正确。
+    其他：目前我们只支持输出dv25 411 和dv50 422 都是625/50i的。
+OtherChanges:
+    无
+
+
+[3.1.1.35090]
+Date:
+    20161201
+Revision:
+    35090
+Fix issues:
+    CLOUD-2431 华数云转码输出AC3的音频在海思的芯片上播放声音小
+    原因及修改方法:  我们之前编出来的ac3是没有compr这个字段的。海思芯片认为少了这个字段导致不能进行+11db的操作，从而导致播放声音轻。所以我们在我们输出的ac3流里加上了这个字段。
+    测试建议: 用编出来的ac3进行一些播放测试吧。如果声音和音量正常就行了。在海思芯片上的播放需要在客户那里进行验证。
+OtherChanges:
+    无
+
+
+[3.1.1.34376]
+Date:
+    20161013
+Revision:
+    34376
+Fix issues:
+    -
+OtherChanges:
+    修改了smoothstreaming内存泄漏的问题。
+    测试：测试smoothstreaming的常规case。
+
+
+[3.1.1.34256]
+Date:
+    20160928
+Revision:
+    34256
+Fix issues:
+    Bug ID:cloud-2215 FTP密码中含有@ 字符，部分格式取不到媒体信息
+    原因及修改方法:对@之类的特殊字符转译%40没有转译回来，支持上去。                             
+    测试建议: 测试含特殊字符的url
+    其他: 无
+OtherChanges:
+    无
+
+
+[3.1.1.34119]
+Date:
+    20160919
+Revision:
+    34119
+Fix issues:
+    修改了一个dts lbr 7.1解码解不出来的问题。
+    测试建议：测试dts解码，多测试几种格式。
+OtherChanges:
+    无
+
+
+[3.1.1.33266]
+Date:
+    20160713
+Revision:
+    33266
+Fix issues:
+    无
+OtherChanges:
+    初始版本
+
+
+初始版本
