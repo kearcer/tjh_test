@@ -1,1 +1,1 @@
-/usr/bin/c++  -lstdc++ -g -Wl,-Bdynamic -ldl CMakeFiles/main.dir/testbox/test.cpp.o -o main  -lavcodec -lavformat -lavutil -lswscale 
+/usr/bin/c++  -lstdc++ -g -Wl,-Bdynamic -ldl CMakeFiles/main.dir/testbox/test.cpp.o -o main 
