@@ -24,3 +24,4 @@ target_compile_options(main PRIVATE -g)
 #链接上一些动态链接so
 # target_link_libraries(main avcodec avformat avutil swscale)
 set(CMAKE_EXE_LINKER_FLAGS "-Wl,-Bdynamic -ldl")
+
