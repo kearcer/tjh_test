@@ -1,3 +1,0 @@
-/home/code/tjh_code/tjh_test/testbox/build/CMakeFiles/rebuild_cache.dir
-/home/code/tjh_code/tjh_test/testbox/build/CMakeFiles/edit_cache.dir
-/home/code/tjh_code/tjh_test/testbox/build/CMakeFiles/main.dir

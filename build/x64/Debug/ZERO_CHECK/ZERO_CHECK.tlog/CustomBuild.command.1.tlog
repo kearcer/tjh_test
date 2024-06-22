@@ -1,0 +1,10 @@
+^E:\WORKPLACE\TJH_TEST\BUILD\CMAKEFILES\7798E6D18445ADBB5226E122DFEA426D\GENERATE.STAMP.RULE
+setlocal
+E:\VS2019\ide\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SE:/workplace/tjh_test -BE:/workplace/tjh_test/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/workplace/tjh_test/build/testbox.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
