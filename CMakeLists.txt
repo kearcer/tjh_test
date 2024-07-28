@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # 指定OpenCV所在的目录
-set(OpenCV_DIR "E:\\workplace\\library\\opencv2\\opencv\\build")
+set(OpenCV_DIR "C:\\WorkSpace\\my_tool\\opencv\\build\\")
 
 # 查找需要的包
 find_package(OpenCV REQUIRED)
