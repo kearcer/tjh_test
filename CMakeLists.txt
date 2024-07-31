@@ -13,7 +13,7 @@ find_package(OpenCV REQUIRED)
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lstdc++")
 
-add_executable(main ./opencv_test/test1.cpp)
+add_executable(main ./opencv_test/resize_research/resize.cpp)
 
 target_compile_options(main PRIVATE -g)
 
