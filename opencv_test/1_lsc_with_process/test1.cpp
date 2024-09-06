@@ -1,6 +1,10 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
+static constexpr uint32_t GRID_CORRECTION_SIZE = 3;
+static constexpr float YUV_SCALE_RATE = 0.8f;
+const constexpr double DOUBLE_EPSINONTHR = 0.00001;
+
 class ShadingCorrection {
 public:
     ShadingCorrection(float calibGridHeight, float calibGridWidth);
@@ -9,6 +13,7 @@ public:
     bool ApplyMaskToImage(cv::Mat& src, cv::Mat& mask, cv::Mat& dst);
     bool GenerateInvertedMask(const cv::Mat& originalMask, const cv::Scalar& originalGlobalMean, cv::Mat& invertedMask);
     bool RecoverOriginalMask(const cv::Mat& mask, const cv::Scalar& mean, cv::Mat& src);
+    bool CalcMaskYUV(cv::Mat& src, cv::Mat& mask);
 
 private:
     cv::Mat mOptimizeMask;
@@ -18,6 +23,33 @@ private:
 
 ShadingCorrection::ShadingCorrection(float calibGridHeight, float calibGridWidth) 
     : mCalibGridHeight(calibGridHeight), mCalibGridWidth(calibGridWidth) {}
+
+
+bool ShadingCorrection::CalcMaskYUV(cv::Mat& src, cv::Mat& mask) {
+    // Get total mean
+    float sum = 0;
+    for (int32_t i = 0; i < src.rows; i++) {
+        for (int32_t j = 0; j < src.cols; j += 2) {
+            uchar y1 = src.at<cv::Vec2b>(i, j)[0];
+            uchar y2 = src.at<cv::Vec2b>(i, j + 1)[0];
+            sum += (y1 + y2);
+        }
+    }
+
+    float totalMean = sum / (src.rows * src.cols) * YUV_SCALE_RATE;
+    cv::Scalar mImageMean = cv::Scalar(totalMean, 0, 0);
+    mask = cv::Mat(src.rows, src.cols, CV_16FC2);
+    mask.forEach<cv::Vec<cv::float16_t, 2>>([&](cv::Vec<cv::float16_t, 2>& pixel, const int32_t* position) -> void {
+        float value = static_cast<float>(src.at<cv::Vec2b>(position[0], position[1])[0]);
+        if (value > DOUBLE_EPSINONTHR) {
+            pixel[0] = cv::saturate_cast<cv::float16_t>(totalMean / value);
+        } else {
+            pixel[0] = cv::saturate_cast<cv::float16_t>(totalMean);
+        }
+        pixel[1] = cv::saturate_cast<cv::float16_t>(1);
+    });
+    return true;
+}
 
 bool ShadingCorrection::CalcMaskBGR(cv::Mat& src, cv::Mat& mask, cv::Scalar& global_mean) {
     // 计算全局均值，用于后续遮罩计算

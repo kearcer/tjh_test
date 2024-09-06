@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LMSDataContainerHeader Version="2" ApplicationDescription="LMSIOManager" ApplicationVersion="2,0,4803,0">
+  <Element Name="tv62 p. hempel m" Visibility="1" CopyOption="1" UniqueID="3de56725-f627-11ec-abe1-8c8d28455fd7">
+    <Data>
+      <Image TextDescription="tv62 p. hempel m">
+        <ImageDescription>
+          <Channels>
+            <ChannelDescription DataType="0" ChannelTag="3" Resolution="8" NameOfMeasuredQuantity="" Min="0.000000e+00" Max="2.550000e+02" Unit="" LUTName="" IsLUTInverted="0" BytesInc="0" BitInc="0"></ChannelDescription>
+            <ChannelDescription DataType="0" ChannelTag="2" Resolution="8" NameOfMeasuredQuantity="" Min="0.000000e+00" Max="2.550000e+02" Unit="" LUTName="" IsLUTInverted="0" BytesInc="1" BitInc="0"></ChannelDescription>
+            <ChannelDescription DataType="0" ChannelTag="1" Resolution="8" NameOfMeasuredQuantity="" Min="0.000000e+00" Max="2.550000e+02" Unit="" LUTName="" IsLUTInverted="0" BytesInc="2" BitInc="0"></ChannelDescription>
+          </Channels>
+          <Dimensions>
+            <DimensionDescription DimID="1" NumberOfElements="1288" Origin="0.000000e+00" Length="1.906667e-04" Unit="m" BitInc="0" BytesInc="3"></DimensionDescription>
+            <DimensionDescription DimID="2" NumberOfElements="966" Origin="0.000000e+00" Length="1.429630e-04" Unit="m" BitInc="0" BytesInc="3864"></DimensionDescription>
+          </Dimensions>
+        </ImageDescription>
+        <TimeStampList NumberOfTimeStamps="1">1ccf925f8fc1d74 </TimeStampList>
+      </Image>
+    </Data>
+    <Memory Size="3732624" MemoryBlockID="">
+      <Frame File="..%5Ctv62%20p.%20hempel%20m.tif" Offset="0" Size="3732624" UUID="72dd2e56-e91d-472e-9aa1-7b2eb6b81d90" />
+    </Memory>
+    <Children />
+  </Element>
+</LMSDataContainerHeader>

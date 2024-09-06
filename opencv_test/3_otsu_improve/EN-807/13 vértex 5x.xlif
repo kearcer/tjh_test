@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LMSDataContainerHeader Version="2" ApplicationDescription="LMSIOManager" ApplicationVersion="2,0,4803,0">
+  <Element Name="13 vértex 5x" Visibility="1" CopyOption="1" UniqueID="3de56707-f627-11ec-abe1-8c8d28455fd7">
+    <Data>
+      <Image TextDescription="13 vértex 5x">
+        <ImageDescription>
+          <Channels>
+            <ChannelDescription DataType="0" ChannelTag="0" Resolution="8" NameOfMeasuredQuantity="" Min="0.000000e+00" Max="2.550000e+02" Unit="" LUTName="Gray" IsLUTInverted="0" BytesInc="0" BitInc="0"></ChannelDescription>
+          </Channels>
+          <Dimensions>
+            <DimensionDescription DimID="1" NumberOfElements="1600" Origin="0.000000e+00" Length="2.368889e-03" Unit="m" BitInc="0" BytesInc="1"></DimensionDescription>
+            <DimensionDescription DimID="2" NumberOfElements="1200" Origin="0.000000e+00" Length="1.776296e-03" Unit="m" BitInc="0" BytesInc="1600"></DimensionDescription>
+          </Dimensions>
+        </ImageDescription>
+        <TimeStampList NumberOfTimeStamps="1">1ccf925f8fbcf53 </TimeStampList>
+      </Image>
+    </Data>
+    <Memory Size="1920000" MemoryBlockID="">
+      <Frame File="..%5C13%20v%C3%A9rtex%205x.tif" Offset="0" Size="1920000" UUID="1da69518-c5c1-46bb-9cc9-71f65cefec0b" />
+    </Memory>
+    <Children />
+  </Element>
+</LMSDataContainerHeader>

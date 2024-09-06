@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LMSDataContainerHeader Version="2" ApplicationDescription="LMSIOManager" ApplicationVersion="2,0,4803,0">
+  <Element Name="05 1120-1" Visibility="1" CopyOption="1" UniqueID="3de56702-f627-11ec-abe1-8c8d28455fd7">
+    <Data>
+      <Image TextDescription="05 1120-1">
+        <ImageDescription>
+          <Channels>
+            <ChannelDescription DataType="0" ChannelTag="0" Resolution="8" NameOfMeasuredQuantity="" Min="0.000000e+00" Max="2.550000e+02" Unit="" LUTName="Gray" IsLUTInverted="0" BytesInc="0" BitInc="0"></ChannelDescription>
+          </Channels>
+          <Dimensions>
+            <DimensionDescription DimID="1" NumberOfElements="1600" Origin="0.000000e+00" Length="1.184444e-03" Unit="m" BitInc="0" BytesInc="1"></DimensionDescription>
+            <DimensionDescription DimID="2" NumberOfElements="1200" Origin="0.000000e+00" Length="8.881481e-04" Unit="m" BitInc="0" BytesInc="1600"></DimensionDescription>
+          </Dimensions>
+        </ImageDescription>
+        <TimeStampList NumberOfTimeStamps="1">1ccf925f8fb5a22 </TimeStampList>
+      </Image>
+    </Data>
+    <Memory Size="1920000" MemoryBlockID="">
+      <Frame File="..%5C05%201120-1.tif" Offset="0" Size="1920000" UUID="09204a82-a022-495d-bc7f-1b60af6a1e09" />
+    </Memory>
+    <Children />
+  </Element>
+</LMSDataContainerHeader>
