@@ -1,0 +1,40 @@
+PS C:\WorkSpace\mytest\tjh_test\build\Debug> ."C:/WorkSpace/mytest/tjh_test/build/Debug/main.exe" --gtest_filter=Lib_CameraControlTest.CheckAvailable
+General
+Complete name                            : C:\ProgramData\Leica Microsystems\Enersight Desktop\images\1\1.jpg
+Format                                   : JPEG
+File size                                : 10.4 MiB
+
+Image
+Format                                   : JPEG
+Image
+Image
+Format                                   : JPEG
+Width                                    : 4 096 pixels
+Image
+Image
+Image
+Image
+Image
+Format                                   : JPEG
+Width                                    : 4 096 pixels
+Height                                   : 3 072 pixels
+Image
+Format                                   : JPEG
+Width                                    : 4 096 pixels
+Image
+Format                                   : JPEG
+Width                                    : 4 096 pixels
+Height                                   : 3 072 pixels
+Color space                              : YUV
+Image
+Format                                   : JPEG
+Image
+Format                                   : JPEG
+Width                                    : 4 096 pixels
+Height                                   : 3 072 pixels
+Color space                              : YUV
+Chroma subsampling                       : 4:2:0
+Bit depth                                : 8 bits
+Compression mode                         : Lossy
+Stream size                              : 10.4 MiB (100%)
+ColorSpace_ICC                           : RGB
