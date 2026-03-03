@@ -1,0 +1,108 @@
+{
+    "project_name": "tjh_test",
+    "build_dir": "build",
+    "output_dir": "bin",
+    "cmake_version": "3.10",
+    "cpp_standard": 17,
+    
+    "categories": {
+        "opencv": {
+            "name": "OpenCV Examples",
+            "description": "OpenCV图像处理示例",
+            "source_dir": "opencv_test",
+            "versions": {
+                "4.5.0": {
+                    "opencv_dir": "C:\\WorkSpace\\my_tool\\opencv_4.5.0\\build",
+                    "include_dirs": [],
+                    "lib_dirs": [],
+                    "libs": []
+                },
+                "4.8.0": {
+                    "opencv_dir": "C:\\WorkSpace\\my_tool\\opencv\\build",
+                    "include_dirs": [],
+                    "lib_dirs": [],
+                    "libs": []
+                }
+            },
+            "default_version": "4.8.0"
+        },
+        "ffmpeg": {
+            "name": "FFmpeg Examples",
+            "description": "FFmpeg音视频处理示例",
+            "source_dir": "ffmpegbox",
+            "versions": {
+                "5.0": {
+                    "ffmpeg_dir": "C:\\WorkSpace\\my_tool\\ffmpeg_5.0",
+                    "include_dirs": ["C:\\WorkSpace\\my_tool\\ffmpeg_5.0\\include"],
+                    "lib_dirs": ["C:\\WorkSpace\\my_tool\\ffmpeg_5.0\\lib"],
+                    "libs": ["avcodec", "avformat", "avutil", "swscale", "swresample"]
+                },
+                "6.0": {
+                    "ffmpeg_dir": "C:\\WorkSpace\\my_tool\\ffmpeg_6.0",
+                    "include_dirs": ["C:\\WorkSpace\\my_tool\\ffmpeg_6.0\\include"],
+                    "lib_dirs": ["C:\\WorkSpace\\my_tool\\ffmpeg_6.0\\lib"],
+                    "libs": ["avcodec", "avformat", "avutil", "swscale", "swresample"]
+                }
+            },
+            "default_version": "6.0"
+        },
+        "static_test": {
+            "name": "Static Tests",
+            "description": "C++基础语法和算法测试",
+            "source_dir": "static_test",
+            "versions": {
+                "default": {
+                    "include_dirs": [],
+                    "lib_dirs": [],
+                    "libs": []
+                }
+            },
+            "default_version": "default"
+        },
+        "testbox": {
+            "name": "Algorithm Tests",
+            "description": "算法练习和LeetCode/牛客题目",
+            "source_dir": "testbox",
+            "versions": {
+                "default": {
+                    "include_dirs": [],
+                    "lib_dirs": [],
+                    "libs": []
+                }
+            },
+            "default_version": "default"
+        },
+        "otherdll": {
+            "name": "Other Libraries",
+            "description": "其他第三方库示例(MediaInfo, EXIF, gRPC等)",
+            "source_dir": "otherdll",
+            "versions": {
+                "default": {
+                    "include_dirs": ["C:\\WorkSpace\\my_tool\\mediainfolib\\include"],
+                    "lib_dirs": ["C:\\WorkSpace\\my_tool\\mediainfolib\\lib"],
+                    "libs": ["MediaInfo", "MediaInfo-Static", "ZenLib"]
+                }
+            },
+            "default_version": "default"
+        },
+        "armbox": {
+            "name": "ARM Examples",
+            "description": "ARM平台相关示例",
+            "source_dir": "armbox",
+            "versions": {
+                "default": {
+                    "include_dirs": [],
+                    "lib_dirs": [],
+                    "libs": []
+                }
+            },
+            "default_version": "default"
+        }
+    },
+    
+    "global_settings": {
+        "cmake_flags": "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "build_type": "Debug",
+        "generator": "Visual Studio 17 2022"
+    }
+}

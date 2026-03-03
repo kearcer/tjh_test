@@ -1,0 +1,82 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug NC61.两数之和",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:\\WorkSpace\\mytest\\tjh_test\\build\\testbox\\NC61_____\\Debug\\NC61_____.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "C:\\WorkSpace\\mytest\\tjh_test\\testbox",
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug test._for_signal",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:\\WorkSpace\\mytest\\tjh_test\\build\\testbox\\test__for_signal\\Debug\\test__for_signal.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "C:\\WorkSpace\\mytest\\tjh_test\\testbox",
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug research_on_enable_shared_from_this",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:\\WorkSpace\\mytest\\tjh_test\\build\\testbox\\research_on_enable_shared_from_this\\Debug\\research_on_enable_shared_from_this.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "C:\\WorkSpace\\mytest\\tjh_test\\testbox",
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug Current Example",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/${input:category}/${input:example}/Debug/${input:example}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug Selected (Auto-configured)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "integratedTerminal"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "category",
+            "type": "pickString",
+            "description": "Select category",
+            "options": [
+                "opencv",
+                "ffmpeg",
+                "static_test",
+                "testbox",
+                "otherdll",
+                "armbox"
+            ],
+            "default": "opencv"
+        },
+        {
+            "id": "example",
+            "type": "promptString",
+            "description": "Enter example name",
+            "default": ""
+        }
+    ]
+}
